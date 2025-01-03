@@ -2540,6 +2540,26 @@
     - filename: SmallThinker-3B-Preview-Q4_K_M.gguf
       sha256: ac04f82a09ee6a2748437c3bb774b638a54099dc7d5d6ef7549893fae22ab055
       uri: huggingface://bartowski/SmallThinker-3B-Preview-GGUF/SmallThinker-3B-Preview-Q4_K_M.gguf
+- !!merge <<: *qwen25
+  name: "qwenwify2.5-32b-v4.5"
+  urls:
+    - https://huggingface.co/Kaoeiri/Qwenwify2.5-32B-v4.5
+    - https://huggingface.co/mradermacher/Qwenwify2.5-32B-v4.5-GGUF
+  description: |
+    The following models were included in the merge:
+    Kaoeiri/Qwenwify-32B-v3
+    allura-org/Qwen2.5-32b-RP-Ink
+    Dans-DiscountModels/Qwen2.5-32B-ChatML
+    Saxo/Linkbricks-Horizon-AI-Japanese-Base-32B
+    OpenBuddy/openbuddy-qwq-32b-v24.2-200k
+    Sao10K/32B-Qwen2.5-Kunou-v1
+  overrides:
+    parameters:
+      model: Qwenwify2.5-32B-v4.5.Q4_K_M.gguf
+  files:
+    - filename: Qwenwify2.5-32B-v4.5.Q4_K_M.gguf
+      sha256: 52670acdc285356c01259f45b1953860f34deb4f80345ca63b60acc19165280c
+      uri: huggingface://mradermacher/Qwenwify2.5-32B-v4.5-GGUF/Qwenwify2.5-32B-v4.5.Q4_K_M.gguf
 - &smollm
   ## SmolLM
   url: "github:mudler/LocalAI/gallery/chatml.yaml@master"
@@ -4414,6 +4434,25 @@
     - filename: HuatuoGPT-o1-8B-Q4_K_M.gguf
       sha256: 3e1ef35fc230182d96ae2d6c7436a2e8250c21a4278e798e1aa45790ba82006b
       uri: huggingface://bartowski/HuatuoGPT-o1-8B-GGUF/HuatuoGPT-o1-8B-Q4_K_M.gguf
+- !!merge <<: *llama31
+  name: "l3.1-purosani-2-8b"
+  urls:
+    - https://huggingface.co/djuna/L3.1-Purosani-2-8B
+    - https://huggingface.co/QuantFactory/L3.1-Purosani-2-8B-GGUF
+  description: |
+    The following models were included in the merge:
+    hf-100/Llama-3-Spellbound-Instruct-8B-0.3
+    arcee-ai/Llama-3.1-SuperNova-Lite + grimjim/Llama-3-Instruct-abliteration-LoRA-8B
+    THUDM/LongWriter-llama3.1-8b + ResplendentAI/Smarts_Llama3
+    djuna/L3.1-Suze-Vume-2-calc
+    djuna/L3.1-ForStHS + Blackroot/Llama-3-8B-Abomination-LORA
+  overrides:
+    parameters:
+      model: L3.1-Purosani-2-8B.Q4_K_M.gguf
+  files:
+    - filename: L3.1-Purosani-2-8B.Q4_K_M.gguf
+      sha256: e3eb8038a72b6e85b7a43c7806c32f01208f4644d54bf94d77ecad6286cf609f
+      uri: huggingface://QuantFactory/L3.1-Purosani-2-8B-GGUF/L3.1-Purosani-2-8B.Q4_K_M.gguf
 - &deepseek
   ## Deepseek
   url: "github:mudler/LocalAI/gallery/deepseek.yaml@master"
@@ -5385,6 +5424,40 @@
     - filename: Violet_Twilight-v0.2.Q4_K_M.gguf
       sha256: b63f07cc441146af9c98cd3c3d4390d7c39bfef11c1d168dc7c6244ca2ba6b12
       uri: huggingface://Epiculous/Violet_Twilight-v0.2-GGUF/Violet_Twilight-v0.2.Q4_K_M.gguf
+- !!merge <<: *mistral03
+  name: "sainemo-remix"
+  icon: https://huggingface.co/Moraliane/SAINEMO-reMIX/resolve/main/remixwife.webp
+  urls:
+    - https://huggingface.co/Moraliane/SAINEMO-reMIX
+    - https://huggingface.co/QuantFactory/SAINEMO-reMIX-GGUF
+  description: |
+    The following models were included in the merge:
+    elinas_Chronos-Gold-12B-1.0
+    Vikhrmodels_Vikhr-Nemo-12B-Instruct-R-21-09-24
+    MarinaraSpaghetti_NemoMix-Unleashed-12B
+  overrides:
+    parameters:
+      model: SAINEMO-reMIX.Q4_K_M.gguf
+  files:
+    - filename: SAINEMO-reMIX.Q4_K_M.gguf
+      sha256: 91c81623542df97462d93bed8014af4830940182786948fc395d8958a5add994
+      uri: huggingface://QuantFactory/SAINEMO-reMIX-GGUF/SAINEMO-reMIX.Q4_K_M.gguf
+- !!merge <<: *mistral03
+  name: "nera_noctis-12b"
+  url: "github:mudler/LocalAI/gallery/chatml.yaml@master"
+  icon: https://cdn-uploads.huggingface.co/production/uploads/642265bc01c62c1e4102dc36/89XJnlNNSsEfBjI1oHCVt.jpeg
+  urls:
+    - https://huggingface.co/Nitral-AI/Nera_Noctis-12B
+    - https://huggingface.co/bartowski/Nera_Noctis-12B-GGUF
+  description: |
+     Sometimes, the brightest gems are found in the darkest places. For it is in the shadows where we learn to really see the light.
+  overrides:
+    parameters:
+      model: Nera_Noctis-12B-Q4_K_M.gguf
+  files:
+    - filename: Nera_Noctis-12B-Q4_K_M.gguf
+      sha256: 0662a9a847adde046e6255c15d5a677ebf09ab00841547c8963668d14baf00ff
+      uri: huggingface://bartowski/Nera_Noctis-12B-GGUF/Nera_Noctis-12B-Q4_K_M.gguf
 - &mudler
   ### START mudler's LocalAI specific-models
   url: "github:mudler/LocalAI/gallery/mudler.yaml@master"
